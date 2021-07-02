@@ -1,10 +1,11 @@
-// import the components here
-import GlobalCss from "./components/GlobalCss";
+import "bootstrap/dist/css/bootstrap.min.css";
+import ReactBootstrapExample from "./components/ReactBootstrapExample";
+
 function App() {
   // code inside div
   return (
     <div>
-      <GlobalCss />
+      <ReactBootstrapExample />
     </div>
   );
 }
