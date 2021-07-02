@@ -15,7 +15,7 @@ const style = {
   },
 };
 
-function InlineStyling() {
+function InlineStyle() {
   return (
     <div style={style.textCenter}>
       <p style={{ color: "chocolate" }}>This is Chocolate</p>
@@ -25,4 +25,4 @@ function InlineStyling() {
   );
 }
 
-export default InlineStyling;
+export default InlineStyle;

@@ -1,10 +1,10 @@
 // import the components here
-import InlineStyling from "./components/InlineStyle";
+import InlineStyle from "./components/InlineStyle";
 function App() {
   // code inside div
   return (
     <div>
-      <InlineStyling />
+      <InlineStyle />
     </div>
   );
 }
