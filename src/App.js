@@ -1,10 +1,10 @@
 // import the components here
-import CssModular from "./components/CssModular";
+import GlobalCss from "./components/GlobalCss";
 function App() {
   // code inside div
   return (
     <div>
-      <CssModular />
+      <GlobalCss />
     </div>
   );
 }

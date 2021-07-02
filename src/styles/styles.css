@@ -1,17 +1,17 @@
-.textCenter {
+.text-center {
   text-align: center;
 }
-.textBigAqua {
+.text-big-aqua {
   font-size: 48px;
   color: aqua;
   font-weight: bold;
 }
-.textMediumTomato {
+.text-medium-tomato {
   font-size: 24px;
-  color: tomat0;
+  color: tomato;
   font-weight: bold;
 }
 
-.textColorViolet {
+.text-color-violet {
   color: blueviolet;
 }
