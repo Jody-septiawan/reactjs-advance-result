@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useReducer } from "react";
 
 export const UserContext = createContext();
 const initialState = {
@@ -10,21 +10,34 @@ const initialState = {
   },
 };
 
-export const UserContextProvider = ({ children }) => {
-  const [state, setState] = useState(initialState);
-  const handleLogin = (payload) => {
-    setState({ ...state, user: payload, isLogin: true });
-  };
+const userReducer = (state, action) => {
+  switch (action.type) {
+    case "LOGIN":
+      return {
+        ...state,
+        user: action.payload,
+        isLogin: true,
+      };
+    case "LOGOUT":
+      return {
+        ...state,
+        user: {
+          id: null,
+          email: "",
+          password: "",
+        },
+        isLogin: false,
+      };
+    default:
+      throw new Error("case unknown");
+  }
+};
 
-  const handleLogout = () => {
-    setState({
-      user: { id: null, email: "", password: "" },
-      isLogin: false,
-    });
-  };
+export const UserContextProvider = ({ children }) => {
+  const [state, dispatch] = useReducer(userReducer, initialState);
 
   return (
-    <UserContext.Provider value={{ state, handleLogin, handleLogout }}>
+    <UserContext.Provider value={{ state, dispatch }}>
       {children}
     </UserContext.Provider>
   );

@@ -1,4 +1,5 @@
 import { useState, useContext } from "react";
+import { useHistory } from "react-router-dom";
 import { Container, Form, Button } from "react-bootstrap";
 import { UserContext } from "../contexts/userContext";
 
@@ -7,6 +8,7 @@ const Signin = () => {
     email: "",
     password: "",
   });
+  const history = useHistory();
   // consume context value with hooks useContext()
   const context = useContext(UserContext);
   console.log(context.state);
@@ -20,7 +22,11 @@ const Signin = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // this is func that we passed from UserContextProvider
-    context.handleLogin(data);
+    context.dispatch({
+      type: "LOGIN",
+      payload: data,
+    });
+    history.push("/");
   };
 
   return (
