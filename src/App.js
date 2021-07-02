@@ -7,7 +7,7 @@ import SignIn from "./pages/SignIn";
 
 import Header from "./components/Header";
 import DetailProduct from "./pages/DetailProduct";
-
+import PrivateRoute from "./components/PrivateRoute";
 function App() {
   // code inside div
   return (
@@ -17,8 +17,8 @@ function App() {
         <Route exact path="/" component={Home} />
         <Route exact path="/about" component={About} />
         <Route exact path="/profile" component={Profile} />
-        <Route exact path="/signup" component={SignIn} />
-        <Route exact path="/product/:id" component={DetailProduct} />
+        <Route exact path="/signin" component={SignIn} />
+        <PrivateRoute exact path="/product/:id" component={DetailProduct} />
       </Switch>
     </Router>
   );
