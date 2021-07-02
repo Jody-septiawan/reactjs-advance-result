@@ -4,7 +4,7 @@ function App() {
   // code inside div
   return (
     <div>
-      <InlineStyling />
+      <h1>App</h1>
     </div>
   );
 }
