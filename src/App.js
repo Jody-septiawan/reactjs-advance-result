@@ -1,5 +1,5 @@
 // import the components here
-import InlineStyling from "./components/InlineStyling";
+import InlineStyling from "./components/InlineStyle";
 function App() {
   // code inside div
   return (
