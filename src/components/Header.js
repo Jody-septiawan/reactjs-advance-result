@@ -17,6 +17,9 @@ const Header = () => {
         <Link to="/profile" className="nav-link">
           Profile
         </Link>
+        <Link to="/product/2" className="nav-link">
+          Detail product with params example
+        </Link>
       </Nav>
       <Button variant="info" onClick={handlePushToSignUp}>
         Sign in
