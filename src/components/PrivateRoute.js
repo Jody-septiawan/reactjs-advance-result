@@ -1,13 +1,20 @@
+import { useContext } from "react";
 import { Redirect, Route } from "react-router-dom";
+
+import { UserContext } from "../contexts/userContext";
 const PrivateRoute = ({ component: Component, ...rest }) => {
-  // assume that user is not login yet
-  const login = false;
+  // we know use dynamic data for validation from user context
+  const context = useContext(UserContext);
   return (
     <>
       <Route
         {...rest}
         render={(props) =>
-          login ? <Component {...props} /> : <Redirect to="/signin" />
+          context.state.isLogin ? (
+            <Component {...props} />
+          ) : (
+            <Redirect to="/signin" />
+          )
         }
       />
     </>

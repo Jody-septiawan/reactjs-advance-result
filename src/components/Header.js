@@ -5,11 +5,13 @@ const Header = () => {
   // doc: https://github.com/ReactTraining/history
   const router = useHistory();
   const handlePushToSignUp = () => {
-    router.push("/signup");
+    router.push("/signin");
   };
   return (
     <Navbar bg="dark" variant="dark">
-      <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+      <Link to="/" className="nav-link">
+        <Navbar.Brand>Home</Navbar.Brand>
+      </Link>
       <Nav className="mr-auto">
         <Link to="/about" className="nav-link">
           About
