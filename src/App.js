@@ -1,10 +1,11 @@
-// import the components here
-import CssModular from "./components/CssModular";
+// import the components
+import Form from "./components/Form";
+
 function App() {
-  // code inside div
+  // place component inside div
   return (
     <div>
-      <CssModular />
+      <Form />
     </div>
   );
 }
