@@ -1,10 +1,10 @@
 // import the components here
-import InlineStyle from "./components/InlineStyle";
+import Form from "./components/Form";
 function App() {
   // code inside div
   return (
     <div>
-      <InlineStyle />
+      <Form />
     </div>
   );
 }
