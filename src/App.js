@@ -1,10 +1,13 @@
+// import global stylesheet in app.js
+import "./styles/styles.css";
 // import the components here
-import GlobalCss from "./components/GlobalCss";
+import Form from "./components/Form";
 function App() {
   // code inside div
   return (
+    // import global stylesheet
     <div>
-      <GlobalCss />
+      <Form />
     </div>
   );
 }
