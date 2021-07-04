@@ -1,11 +1,16 @@
+// import css bootstrap
 import "bootstrap/dist/css/bootstrap.min.css";
-import ReactBootstrapExample from "./components/ReactBootstrapExample";
+
+// import styles.css
+import "./styles/styles.css";
+
+// import components
+import Form from "./components/Form";
 
 function App() {
-  // code inside div
   return (
     <div>
-      <ReactBootstrapExample />
+      <Form />
     </div>
   );
 }
