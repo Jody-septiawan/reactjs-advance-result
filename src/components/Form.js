@@ -27,6 +27,7 @@ const styles = {
 
 function Form() {
   return (
+    // inline styling
     <form style={styles.form}>
       <div style={styles.formGroup}>
         <label htmlFor="username" style={styles.formLabel}>
@@ -38,6 +39,7 @@ function Form() {
           style={styles.formInput}
         />
       </div>
+      {/* css modules */}
       <div className={cssModules.formGroup}>
         <label htmlFor="email" className={cssModules.formLabel}>
           Email
