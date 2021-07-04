@@ -32,6 +32,7 @@ const styles = {
 // change component name because it has used by react-bootstrap
 function FormComponent() {
   return (
+    //inline styling
     <form style={styles.form}>
       <div style={styles.formGroup}>
         <label htmlFor="username" style={styles.formLabel}>
@@ -43,6 +44,7 @@ function FormComponent() {
           style={styles.formInput}
         />
       </div>
+      {/* css module */}
       <div className={cssModules.formGroup}>
         <label htmlFor="email" className={cssModules.formLabel}>
           Email
@@ -54,6 +56,7 @@ function FormComponent() {
           className={cssModules.formInput}
         />
       </div>
+      {/* css global */}
       <div className="form-group">
         <label htmlFor="gender" className="form-label">
           Gender
@@ -64,18 +67,15 @@ function FormComponent() {
           <option>Female</option>
         </select>
       </div>
+      {/* react-bootstrap componen */}
       <Form.Row>
-        <Form.Group as={Col} md="6" controlId="validationCustom03">
+        <Form.Group as={Col} md="6">
           <Form.Label>City</Form.Label>
           <Form.Control type="text" placeholder="City" required />
         </Form.Group>
-        <Form.Group as={Col} md="3" controlId="validationCustom04">
+        <Form.Group as={Col} md="6">
           <Form.Label>State</Form.Label>
           <Form.Control type="text" placeholder="State" required />
-        </Form.Group>
-        <Form.Group as={Col} md="3" controlId="validationCustom05">
-          <Form.Label>Zip</Form.Label>
-          <Form.Control type="text" placeholder="Zip" required />
         </Form.Group>
       </Form.Row>
     </form>
