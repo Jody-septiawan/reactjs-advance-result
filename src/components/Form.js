@@ -50,10 +50,10 @@ function Form() {
         />
       </div>
       <div className="form-group">
-        <label htmlFor="email" className="form-label">
+        <label htmlFor="gender" className="form-label">
           Gender
         </label>
-        <select className="form-select" defaultValue="Choose...">
+        <select id="gender" className="form-select" defaultValue="Choose...">
           <option>Choose...</option>
           <option>Male</option>
           <option>Female</option>
