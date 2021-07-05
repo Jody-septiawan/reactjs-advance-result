@@ -4,10 +4,10 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Profile from "./pages/Profile";
 import SignIn from "./pages/SignIn";
-import DetailProduct from "./pages/DetailProduct";
+import DetailUser from "./pages/DetailUser";
 import PrivateRoute from "./components/PrivateRoute";
+
 function App() {
-  // code inside div
   return (
     <Router>
       <div>
@@ -27,10 +27,11 @@ function App() {
       </div>
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route exact path="/about" component={About} />
-        <Route exact path="/profile" component={Profile} />
         <Route exact path="/signin" component={SignIn} />
-        <PrivateRoute exact path="/product/:id" component={DetailProduct} />
+        {/* protect this routes with <PrivateRoute> */}
+        <PrivateRoute exact path="/about" component={About} />
+        <PrivateRoute exact path="/profile" component={Profile} />
+        <PrivateRoute exact path="/users/:id" component={DetailUser} />
       </Switch>
     </Router>
   );
