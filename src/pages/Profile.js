@@ -3,7 +3,7 @@ import { Container } from "react-bootstrap";
 function Profile() {
   return (
     <Container className="text-center">
-      <p className="h1">Profile page</p>
+      <p className="h1">Profile</p>
       <p>
         Nam pulvinar aliquam pretium. Etiam quis aliquet urna, quis maximus
         elit. In imperdiet imperdiet nulla, ac rhoncus mauris semper
