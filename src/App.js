@@ -1,7 +1,7 @@
-// import the components here
+// import components here
 import Form from "./components/Form";
+
 function App() {
-  // code inside div
   return (
     <div>
       <Form />
