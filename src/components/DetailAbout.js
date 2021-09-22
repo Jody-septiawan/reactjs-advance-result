@@ -1,10 +1,10 @@
 // import PropTypes package
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 const DetailAbout = (props) => {
   return (
     <>
-      <h1>title: {props.title}</h1>
+      <h1>title: {typeof props.title}</h1>
       <p>summary: {props.summary}</p>
       <p>total guest: {props.total}</p>
     </>
@@ -17,5 +17,9 @@ DetailAbout.propTypes = {
   summary: PropTypes.string,
   total: PropTypes.number,
 };
+
+// DetailAbout.defaultProps = {
+//   title: 'Hello Wolrd',
+// };
 
 export default DetailAbout;

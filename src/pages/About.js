@@ -1,6 +1,6 @@
-import { Container } from "react-bootstrap";
+import { Container } from 'react-bootstrap';
 // import component
-import DetailAbout from "../components/DetailAbout";
+import DetailAbout from '../components/DetailAbout';
 
 const About = () => {
   return (
@@ -12,9 +12,9 @@ const About = () => {
         a.
       </p>
       <DetailAbout
-        title="Success.ltd"
+        title={9999}
         summary="No. 1 Automobile company in USA"
-        total="1300"
+        total={1300}
       />
     </Container>
   );
